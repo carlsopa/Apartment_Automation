@@ -1,12 +1,13 @@
 import paho.mqtt.client as mqtt
 from time import *
-
+#setup initial definitions for the mqtt.client
 def on_connect(client, userdata, flags, rc):
     client.subscribe('/Apartment/Sensors/Alarm/FrontDoor')
     client.subscribe('/Apartment/Sensors/Control/Temp')
 def on_message(client, userdata, msg):
     MsgStr = str(msg.payload.decode("utf-8"))
     print(msg.topic+" "+MsgStr)
+#using mqtt.message_callback_add: define the different sensors around the apartment and what they will do
 def FrontDoor(mosq, onj, msg):
     print('front door change')
 def TempSensor(mosq, obj, msg):
