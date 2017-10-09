@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>THIS DOES WORK</title>
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="/static/main.js"></script>
+	</head>
+	<body>
+		<form>
+			<label for="LeftSwitch">Left Light:</label>
+			<input type="checkbox" data-role="flipswitch" name="LeftSwitch" id="LeftSwitch">
+			<br>
+			<label for="RightSwitch">Right Light</label>
+			<input type="checkbox" data-role="flipswitch" name="RightSwitch" id="RightSwitch">
+		</form>
+		<script type="text/javascript" >
+			$(document).on("change","#RightSwitch",function(e) {
+				console.log($(this).prop("checked"));
+				$(document).load('/bedroomlightRight')
+			})
+			$(document).on("change","#LeftSwitch",function(e) {
+				console.log($(this).prop("checked"));
+				$(document).load('/bedroomlightLeft')
+			})
+				
+		</script>
+	</body>
+</html>

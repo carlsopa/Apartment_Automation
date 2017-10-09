@@ -1,0 +1,188 @@
+
+<html>
+
+<head>
+    <title>Carlson Casa Multipage</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+    <div data-role='header' data-position='fixed' class=' ui-header ui-bar-a ui-header-fixed slidedown'>Carlson Casa
+        <div data-role='navbar' class='ui-navbar' role='navigation'>
+            <ul class='ui-grid-d'>
+                <li class='ui-block-a'>
+                    <a href='#Index' class='ui-btn'>Home</a>
+                </li>
+                <li class='ui-block-b'>
+                    <a href='#Alarm' class='ui-btn'>Alarm</a>
+                </li>
+                <li class='ui-block-c'>
+                    <a href='#Chandelier' class='ui-btn'>Chandelier</a>
+                </li>
+                <li class='ui-block-d'>
+                    <a href='#BedroomLights' class='ui-btn'>Bedroom Lights</a>
+                </li>
+                <li class='ui-block-e'>
+                    <a href='#AlarmClock' class='ui-btn'>Alarm Clock</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role='page' id="Index" style="padding-top:100px">
+        <p>Welcome to the control Panel to the Carlson Apartment.</p>
+        <a href='#Chandelier' class="ui-btn ui-shadow ui-corner-all">Chandelier</a>
+    </div>
+    <div data-role='page' id="Alarm">
+        Control and view alarm events
+    </div>
+    <div data-role='page' id='Chandelier'>
+        <p>Control your awesome living room chandelier from here</p>
+        <form>
+            <fieldset data-role="controlgroup" data-type='horizontal'>
+                <input type='radio' name='ChandelierLight' id='OutsideTop' value='3' class='lights'>
+                <label for='OutsideTop'>Outside Top</label>
+                <input type='radio' name='ChandelierLight' id='OutsideBottom' value='2' class='lights'>
+                <label for='OutsideBottom'>Outside Bottom</label>
+                <input type='radio' name='ChandelierLight' id='BottomOutside' value='4' class='lights'>
+                <label for='BottomOutside'>Bottom Outside</label>
+            </fieldset>
+            <fieldset data-role='controlgroup' data-type='horizontal'>
+                <input type='radio' name='LightControl' id='on' value='ON'>
+                <label for='on'>ON</label>
+                <input type='radio' name='LightControl' id='off' value='OFF'>
+                <label for='off'>OFF</label>
+            </fieldset>
+            <label for='BrightnessControl'>Brightness Control</label>
+            <input type='range' name='BrightnessControl' id='BC' data-highlight='true' min='0' max='255' value='127'>
+        </form>
+        <div data-role='collapsible'>
+            <h4>Set Color</h4>
+            <p>place a color theme here</p>
+            <form>
+                <label for='RedColor'>Red</label>
+                <input type='range' name='RedColor' id='RC' data-highlight='true' min='0' max='255' value='127'>
+                <label for='GreenColor'>Green</label>
+                <input type='range' name='GreenColor' id='GC' data-highlight='true' min='0' max='255' value='127'>
+                <label for='BlueColor'>Blue</label>
+                <input type='range' name='BlueColor' id='BlC' data-highlight='true' min='0' max='255' value='127'>
+                <input type='button' value='Set Color'>
+            </form>
+        </div>
+        <div data-role='collapsible'>
+            <h4>Theater Chase</h4>
+            <p>2 colors run around</p>
+            <form>
+                <div data-role='collapsible'>
+                    <h4>Color 1</h4>
+                    <label for='RedColor'>Red</label>
+                    <input type='range' name='RedColor' id='RC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='GreenColor'>Green</label>
+                    <input type='range' name='GreenColor' id='GC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='BlueColor'>Blue</label>
+                    <input type='range' name='BlueColor' id='BlC' data-highlight='true' min='0' max='255' value='127'>
+                </div>
+                <div data-role='collapsible'>
+                    <h4>Color 2</h4>
+                    <label for='RedColor'>Red</label>
+                    <input type='range' name='RedColor' id='RC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='GreenColor'>Green</label>
+                    <input type='range' name='GreenColor' id='GC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='BlueColor'>Blue</label>
+                    <input type='range' name='BlueColor' id='BlC' data-highlight='true' min='0' max='255' value='127'>
+                </div>
+                <input type='button' value='Theater Chase'>
+            </form>
+        </div>
+        <div data-role='collapsible'>
+            <h4>Rainbow Cycle</h4>
+            <p>Have a rainbow run around</p>
+            <input type='button' value='Rainbow Chase'>
+        </div>
+        <div data-role='collapsible'>
+            <h4>Fading</h4>
+            <p>2 colors fade into each other</p>
+            <form>
+                <div data-role='collapsible'>
+                    <h4>Color 1</h4>
+                    <label for='RedColor'>Red</label>
+                    <input type='range' name='RedColor' id='RC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='GreenColor'>Green</label>
+                    <input type='range' name='GreenColor' id='GC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='BlueColor'>Blue</label>
+                    <input type='range' name='BlueColor' id='BlC' data-highlight='true' min='0' max='255' value='127'>
+                </div>
+                <div data-role='collapsible'>
+                    <h4>Color 2</h4>
+                    <label for='RedColor'>Red</label>
+                    <input type='range' name='RedColor' id='RC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='GreenColor'>Green</label>
+                    <input type='range' name='GreenColor' id='GC' data-highlight='true' min='0' max='255' value='127'>
+                    <label for='BlueColor'>Blue</label>
+                    <input type='range' name='BlueColor' id='BlC' data-highlight='true' min='0' max='255' value='127'>
+                </div>
+                <input type='button' value='Color Fading'>
+            </form>
+        </div>
+
+    </div>
+    <div data-role='page' id='BedroomLights' style='padding-top:50px'>
+        <p>Control the bedroom lights, over the bed</p>
+        <form>
+            <label for="LeftSwitch">Left Light:</label>
+            <input type="checkbox" data-role="flipswitch" name="LeftSwitch" id="LeftSwitch">
+            <br>
+            <label for="RightSwitch">Left Light:</label>
+            <input type="checkbox" data-role="flipswitch" name="RightSwitch" id="RightSwitch">
+        </form>
+    </div>
+    <div data-role='page' id='AlarmClock'>
+        Control your semi cool alarm clock here
+    </div>
+</body>
+<script type="text/javascript" >
+			$(document).on("change","#on",function(){
+				console.log("first step")
+				$('input[type="radio"]').	filter('.lights').each(function(){
+					if($(this).is(':checked')){
+						console.log("third step")
+						msg = "c:on:"+$(this).val()	
+						$.post("/chandelier/"+msg)							
+					}				
+				})		
+			}),
+			$(document).on("change","#off",function(){
+				console.log("first step")
+				$('input[type="radio"]').	filter('.lights').each(function(){
+					if($(this).is(':checked')){
+						msg= "c:off:"+$(this).val() 			
+						$.post("/chandelier/"+msg)					
+					}				
+				})		
+			}),
+			$(document).on("slidestop","#BC",function(e){
+				//alert($("#BC").val());
+				Brightness = $("#BC").val()
+				$('input[type="radio"]').	filter('.lights').each(function(){
+					if($(this).is(':checked')){
+						Light = $(this).val()
+						msg = "c:set:"+Light+":"+Brightness
+						$.post("/chandelier/"+msg)			
+					}				
+				})			
+			}),
+			$(document).on("slidestop","#BlueC","#GreenC",function(e){
+				alert("dragged me")		
+			})
+			$(document).on("change","#RightSwitch",function(e) {
+				console.log($(this).prop("checked"));
+				$.post('/bedroomlight/right')
+			})
+			$(document).on("change","#LeftSwitch",function(e) {
+				console.log($(this).prop("checked"));
+				$.post('/bedroomlight/left')
+			})
+		</script>
+
+</html>
