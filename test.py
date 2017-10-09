@@ -1,3 +1,4 @@
+#using the flask frame work and server, create a multipage webpage for to control my apartments various lights and sensors.
 from flask import *
 from Controlsa import *
 
@@ -8,11 +9,12 @@ cl = Chandelier()
 
 app = Flask(__name__)
 app.secret_key = "my secret"
+#inital webpage viewed
 @app.route('/')
 def Apartment():
     #return 'hello'
     return render_template('mobile.html', title='')
-
+#route to take when the bedroom light toggles are switched.  
 @app.route('/bedroomlight/<string:light>',methods=['POST'])
 def led(light):
     #print(light)
@@ -26,7 +28,7 @@ def led(light):
 @app.route('/chandelier')
 def Chandelier():
     return render_template('chandelier.html', title='')
-
+#route to take when a change is detected on the chandelier control page
 @app.route('/chandelier/<string:ctrl>',methods=['POST'])
 def chandelier(ctrl):
     #print('hello')
