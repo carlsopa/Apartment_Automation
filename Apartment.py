@@ -8,7 +8,6 @@ app = Flask(__name__)
 app.secret_key = "my secret"
 @app.route('/')
 def Apartment():
-        print('Good evening Sir')
         return render_template('apt.html', title='')
 @app.route('/alarm')
 def ApartmentAlarm():
