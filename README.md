@@ -13,3 +13,5 @@ As the apartment currently stands my network consists of:
 <p>While it currently is lacking in the full autonamous that I would like to have, all the sensors and relays are connected together.  The controls for the system include a simple webpage that is built using PYTHON FLASK and is hosted on the Raspberry Pi, as well as an android app which was side loaded to my phone.</p>
 
 <p>The next steps for this will be working towards full automation of all my lights, and integration into both Amazon Alexa as well as Google Home.</p>
+
+<p>You can view what the web based control panel looks like by go to <a href="http://www.carlsondigitalsigns.com/casa/mobile.html">Web Controls</a>
