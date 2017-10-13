@@ -1,3 +1,5 @@
+#Using paho mqtt I send string messages to my different boards and sensors.
+#They are then controlled by what message they receive
 import paho.mqtt.client as mqtt
 import time
 
